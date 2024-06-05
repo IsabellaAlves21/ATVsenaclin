@@ -184,7 +184,7 @@ ORDER BY nome ASC /*A-Z*/
  
  
  
-SELECT consulta.datahora,dentista.nome, paciente.nome,dentista.telefone, paciente.telefone
+SELECT consulta.datahora,dentista.nome AS 'nomeDentista', paciente.nome,dentista.telefone, paciente.telefone
 FROM consulta
 INNER JOIN paciente
 ON  paciente.codPaciente = consulta.codPaciente
