@@ -229,6 +229,20 @@ ORDER BY consulta.datahora DESC;
 
 SELECT * FROM dentista 
 
+/*16-desafio*/
+
+SELECT 
+    d.nome AS 'nome do dentista', 
+    COUNT(c.codDentista) AS 'numero de consultas'
+FROM 
+    dentista d
+LEFT JOIN 
+    consulta c ON d.codDentista = c.codDentista
+GROUP BY 
+    d.codDentista
+ORDER BY 
+    `numero de consultas` DESC;
+
 
 
  
