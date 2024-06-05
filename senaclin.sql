@@ -52,7 +52,7 @@ CONSTRAINT PRIMARY KEY (codDentista)
 /* Consertos */
  
 ALTER TABLE Dentista
-ADD constraint ck_especialidade check (especialidade= 'Ortodontia' or especialidade= 'geral' or especialidade= 'Periodontia' or especialidade= 'implantodontia' or especialidade= ' ');
+ADD constraint ck_especialidade check (especialidade= 'Ortodontia' or especialidade= 'geral' or especialidade= 'Periodontia' or especialidade= 'implantodontia');
  
 ALTER TABLE Dentista
 MODIFY COLUMN especialidade VARCHAR(100) NOT null;
@@ -205,7 +205,7 @@ ORDER BY especialidade ASC /*A-Z*/
  
 SELECT COUNT(codConsulta) AS quantidade_consultas
 FROM consulta
-WHERE datahora >= '2024-05-25'
+WHERE datahora like '2024-05%'
  
 /* 13- Criar uma query que traga todos os tipos de consulta, agrupadas pela quantidade. */
  
